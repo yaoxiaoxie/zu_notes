@@ -3,13 +3,26 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background: url('sky.jpg') no-repeat center center fixed; /* 天空背景图片 */
+    background: url('skybg.webp') no-repeat center center fixed; /* 天空背景图片 */
     background-size: cover;
     height: 100vh;
     /* display: flex;
     justify-content: center;
     align-items: center; */
 }
+
+.chapter-box, .section-box {
+    background-color: rgba(255, 255, 255, 0.7); /* 设置半透明背景 */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    opacity: 0.8; /* 初始透明度 */
+    margin-bottom: 20px;
+}
+
 
 
 
@@ -21,13 +34,18 @@ body {
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     margin: 0 auto; /* 水平居中 */
-    overflow-y: auto;
-    max-height: 80vh; /* 最大高度，防止内容过长 */
+    /* overflow-y: auto;
+    max-height: 80vh; 最大高度，防止内容过长 */
 }
 
 .note-content {
     color: #333;
     line-height: 1.6;
+}
+
+/* 添加一个容器的 margin-bottom，以防止页面底部内容被切断 */
+.note-container {
+    margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {
@@ -42,6 +60,7 @@ body {
     gap: 20px;
 }
 
+
 .lesson-box {
     background-color: rgba(255, 255, 255, 0.7); /* 设置半透明背景 */
     padding: 20px;
@@ -51,6 +70,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
     opacity: 0.8; /* 初始透明度 */
+    margin-bottom: 20px;
 }
 
 .lesson-box h2 {
@@ -62,8 +82,9 @@ body {
     color: #666;
 }
 
-.lesson-box:hover {
+.lesson-box:hover, .chapter-box:hover, .section-box:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     opacity: 1; /* 悬停时不透明 */
 }
+
