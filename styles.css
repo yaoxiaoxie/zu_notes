@@ -88,3 +88,24 @@ body {
     opacity: 1; /* 悬停时不透明 */
 }
 
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+    width: 12px;  /* 滚动条的宽度 */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;  /* 滚动条背景设置为透明 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(100, 100, 100, 0.3); /* 滚动条把手默认设置为半透明 */
+    border-radius: 10px;  /* 设置圆角 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.6); /* 滚动条把手在鼠标悬停时变得更明显 */
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(100, 100, 100, 0.8); /* 滚动条把手在点击时变得更加明显 */
+}
